@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>최현수 — GAME DEVELOPER PORTFOLIO</title>
+<meta name="description" content="최현수 게임 프로그래머 포트폴리오. Unity / C# 기반 게임 개발.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HP bar -->
+<div class="hpbar" id="hpbar" aria-hidden="true">
+  <div class="hpbar__fill" id="hpbarFill"></div>
+  <span class="hpbar__label">HP</span>
+</div>
+
+<!-- ============ 네비게이션 ============ -->
+<nav class="nav" id="mainNav">
+  <a class="nav__logo" href="#top">CH<span class="nav__logo-accent">.</span></a>
+  <ul class="nav__links">
+    <li><a class="nav__link is-active" href="#top">HOME</a></li>
+    <li><a class="nav__link" href="#status">STATUS</a></li>
+    <li><a class="nav__link" href="#stages">STAGES</a></li>
+    <li><a class="nav__link" href="#achievements">ACHIEVE</a></li>
+    <li><a class="nav__link" href="#guild">GUILD</a></li>
+    <li><a class="nav__link" href="#contact">CONTACT</a></li>
+  </ul>
+  <button class="nav__hamburger" id="navHamburger" aria-label="메뉴">☰</button>
+</nav>
+
+<!-- 모바일 메뉴 -->
+<div class="nav__mobile" id="navMobile">
+  <a href="#top"          onclick="closeMobileNav()">HOME</a>
+  <a href="#status"       onclick="closeMobileNav()">STATUS</a>
+  <a href="#stages"       onclick="closeMobileNav()">STAGES</a>
+  <a href="#achievements" onclick="closeMobileNav()">ACHIEVEMENTS</a>
+  <a href="#guild"        onclick="closeMobileNav()">GUILD</a>
+  <a href="#contact"      onclick="closeMobileNav()">CONTACT</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__scanline" aria-hidden="true"></div>
+  <p class="eyebrow eyebrow--pixel">GAME DEVELOPER · SEMYUNG COMPUTER H.S.</p>
+  <h1 class="hero__name">최현수</h1>
+  <p class="hero__role">CHOI HYUNSOO <span class="dim">／</span> 게임 프로그래머</p>
+  <p class="hero__keyword">키워드 : <strong>성장</strong></p>
+  <a class="hero__cta" href="#status">
+    <span>PRESS START</span>
+    <span class="hero__cta-arrow" aria-hidden="true">▼</span>
+  </a>
+</header>
+
+<main>
+
+  <!-- ============ STATUS ============ -->
+  <section class="section" id="status">
+    <p class="eyebrow eyebrow--pixel">STATUS WINDOW</p>
+    <h2 class="section__title">캐릭터 능력치</h2>
+    <div class="statuscard">
+      <div class="statuscard__id">
+        <div class="statuscard__avatar" aria-hidden="true">🎮</div>
+        <p class="statuscard__name">최현수</p>
+        <p class="statuscard__class">CLASS : GAME PROGRAMMER</p>
+        <p class="statuscard__class">SCHOOL : 세명컴퓨터고등학교 게임소프트웨어과</p>
+        <p class="statuscard__class">2024.03 – 2027.02</p>
+      </div>
+      <ul class="statuscard__stats">
+        <li class="stat">
+          <div class="stat__head">
+            <span class="stat__name">UNITY</span>
+            <span class="stat__rank">상</span>
+          </div>
+          <div class="stat__bar"><div class="stat__bar-fill" style="width:92%"></div></div>
+          <p class="stat__desc">2D/3D/VR/AR 게임 개발, 게임 연출(애니메이션·라이트·카메라·Post Processing), NavMesh 기반 적 AI, 콜라이더 기반 기믹 시스템</p>
+        </li>
+        <li class="stat">
+          <div class="stat__head">
+            <span class="stat__name">UNITY C#</span>
+            <span class="stat__rank">중</span>
+          </div>
+          <div class="stat__bar"><div class="stat__bar-fill" style="width:68%"></div></div>
+          <p class="stat__desc">플레이어 이동·조작, 물리 시스템(Rigidbody·Collider), Raycast, 씬 전환, 점수·타이머·랭킹 시스템, UI 연결</p>
+        </li>
+        <li class="stat">
+          <div class="stat__head">
+            <span class="stat__name">HTML / JS / REACT</span>
+            <span class="stat__rank">상</span>
+          </div>
+          <div class="stat__bar"><div class="stat__bar-fill" style="width:90%"></div></div>
+          <p class="stat__desc">웹페이지 제작 및 화면 구현, 간단한 미니게임 및 반응형 사이트 제작 경험</p>
+        </li>
+        <li class="stat">
+          <div class="stat__head">
+            <span class="stat__name">SQL</span>
+            <span class="stat__rank">중</span>
+          </div>
+          <div class="stat__bar"><div class="stat__bar-fill" style="width:60%"></div></div>
+          <p class="stat__desc">데이터 조회 및 기본 쿼리 작성</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ STAGE SELECT ============ -->
+  <section class="section section--dark" id="stages">
+    <p class="eyebrow eyebrow--pixel">STAGE SELECT</p>
+    <h2 class="section__title">플레이할 스테이지를 선택하세요</h2>
+    <p class="section__sub">완성한 게임들 — PLAY는 깃허브, WATCH는 플레이 영상으로 이동합니다.</p>
+
+    <!-- 장르 필터 -->
+    <div class="filter-bar" id="filterBar"></div>
+
+    <!-- 게임 그리드 -->
+    <div class="stagegrid" id="stageGrid"></div>
+
+    <!-- 더보기 버튼 -->
+    <div style="display:flex; justify-content:center; margin-top:2rem;">
+      <button class="btn btn--more" id="moreBtn" style="display:none"></button>
+    </div>
+
+    <!-- 진행중 -->
+    <div class="nextstage">
+      <p class="nextstage__label">NEXT STAGE — IN PROGRESS</p>
+      <div class="nextstage__list">
+        <span class="chip chip--blood">공포게임</span>
+        <span class="chip chip--gold">로그라이크</span>
+        <span class="chip chip--cyan">사냥게임</span>
+      </div>
+      <p class="nextstage__desc">그동안 쌓은 경험과 발전된 실력을 바탕으로, 지금까지 만든 것 중 가장 높은 완성도를 목표로 제작 중입니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="section" id="achievements">
+    <p class="eyebrow eyebrow--pixel">ACHIEVEMENTS</p>
+    <h2 class="section__title">달성 업적</h2>
+    <div class="achgrid">
+      <div class="achcard achcard--gold">
+        <div class="achcard__medal" aria-hidden="true">🏆</div>
+        <p class="achcard__date">2026.04.07</p>
+        <p class="achcard__title">미래유망 최우수상</p>
+        <p class="achcard__desc">VR기반 공포게임 · AR기반 모바일게임<br>— 4년 만에 처음 나온 만점자</p>
+        <p class="achcard__org">서강대학교</p>
+      </div>
+      <div class="achcard achcard--cyan">
+        <div class="achcard__medal" aria-hidden="true">🥉</div>
+        <p class="achcard__date">2025.07.18</p>
+        <p class="achcard__title">프로그래밍 문제해결 챌린지 3위</p>
+        <p class="achcard__desc">온라인 코딩 테스트 (동상)</p>
+        <p class="achcard__org">세명컴퓨터고등학교</p>
+      </div>
+    </div>
+
+    <!-- 포트폴리오 다운로드 -->
+    <div class="ppt-row">
+      <p class="eyebrow eyebrow--pixel" style="margin-bottom:.8rem;">PORTFOLIO</p>
+      <a id="pptBtn" class="btn btn--ppt" href="#" target="_blank" rel="noopener">
+        📄 포트폴리오 PDF 보기
+      </a>
+      <p class="ppt-note">Google Drive · 새 탭에서 열고 다운로드할 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ GUILD ============ -->
+  <section class="section section--dark" id="guild">
+    <p class="eyebrow eyebrow--pixel">GUILD</p>
+    <h2 class="section__title">소속 활동</h2>
+    <div class="guildgrid">
+      <div class="guildcard">
+        <p class="guildcard__role">GUILD MASTER</p>
+        <p class="guildcard__name">게임 자율동아리 대표</p>
+      </div>
+      <div class="guildcard">
+        <p class="guildcard__role">MEMBER</p>
+        <p class="guildcard__name">미래인재(게임개발)</p>
+      </div>
+      <div class="guildcard">
+        <p class="guildcard__role">MEMBER</p>
+        <p class="guildcard__name">게임창작동아리</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ SAVE POINT ============ -->
+<footer class="savepoint" id="contact">
+  <div class="savepoint__glow" aria-hidden="true"></div>
+  <p class="eyebrow eyebrow--pixel">SAVE POINT</p>
+  <h2 class="savepoint__title">Game Saved.</h2>
+  <p class="savepoint__sub">연락은 언제든 환영합니다.</p>
+  <ul class="savepoint__list">
+    <li><span class="savepoint__k">TEL</span><a href="tel:01075048978">010-7504-8978</a></li>
+    <li><span class="savepoint__k">MAIL</span><a href="mailto:hyunsooc518@gmail.com">hyunsooc518@gmail.com</a></li>
+    <li><span class="savepoint__k">GITHUB</span><a href="https://github.com/hood122977-ai" target="_blank" rel="noopener">github.com/hood122977-ai</a></li>
+  </ul>
+  <p class="savepoint__copy">© 최현수 · GAME PROGRAMMER PORTFOLIO</p>
+</footer>
+
+<script>
+function closeMobileNav() {
+  document.getElementById("navMobile").classList.remove("is-open");
+}
+document.getElementById("navHamburger").addEventListener("click", () => {
+  document.getElementById("navMobile").classList.toggle("is-open");
+});
+</script>
+<script src="js/javaScript.js" defer></script>
+</body>
+</html>
